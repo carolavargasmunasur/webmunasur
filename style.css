@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* - RESET - */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 20px;
+}
+
+/* - HEADER - */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    padding: 20px 40px;
+    background-color: white;
+    z-index: 100;
+    font-size: smaller;
+}
+#logo img {
+    display: block;
+    padding-right: 30px;
+    width: 70px;
+    height: auto;
+}
+
+/* - BODY - */
+body {
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    margin: 0;
+}
+body:not(header) {
+    padding-top: 83.34px;
+}
+
+/* - NAVEGACION */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-weight: bold;
+}
+nav a:hover {
+    color:#777;
+}
+
+/* - SECCIONES - */
+.portada {
+    background-color: #f15a2c;
+    width: 100%;
+    display: flex;
+    height: 550px;
+    overflow: hidden;
+}
+.portadaslogans {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 30px;
+}
+.portadaslogans img {
+    width: auto;
+    height: 100%; 
+    object-fit: contain; 
+}
+.portadaimagen {
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+}
+.portadaimagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portadaceleste {
+    width: 5%;
+    background-color: #7eb7e4;
+}
+
+/*STATS*/
+.iniciostats {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 80px);
+    margin: 60px auto;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+.stats h5 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin: 0;
+    font-weight: 400;
+}
+.stats p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+/*SUMATE*/
+.iniciosumate {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 500px;
+    align-items: stretch;
+}
+.iniciosumatetextos {
+    background: #f15a2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    color: white;
+    gap: 20px;
+    width: 50%
+}
+.iniciosumatetextouno h4 {
+    flex: 1 1 50%;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.iniciosumateboton {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    white-space: nowrap;
+}
+.iniciosumateboton p {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+.iniciosumateimagen {
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.iniciosumateimagen img {
+    flex: 1 1 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: inherit;
+    align-items: stretch;
+}
+.iniciosumateimagen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #7eb7e4;
+    z-index: 2;
+}
+/*PROXIMOS EVENTOS*/
+.proximoseventos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    align-items: start;
+}
+.proximoseventostitulo h4 {
+    font-size: 48px;
+    font-weight: 300;
+    scroll-padding: 20px;
+}
+.proximoseventosinfo {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.proximoseventosmes h5 {
+    color: #f15a2c;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+.proximoseventosevento h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+.proximoseventodescripción p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.botoninscribite {
+    width: fit-content;
+    padding: 12px 32px;
+    background-color: #f89825;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    transition: 0.2s;
+}
+.botoninscribite:hover {
+    opacity: 0.85;
+}
+
+/*COMITÉ*/
+.comitejecutivo {
+    background-color: #343434;
+    color: white;
+    max-width: auto;
+    margin: 0 auto;
+    padding: 40px 40px;
+    display: flex;
+}
+.comiteejecutivotitulo h4 {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 50% 0%;
+}
+.comitejecutivocolumna {
+    flex: 1;
+    text-align: center;
+}
+.comiteejecutivodirector {
+    padding: 15px;
+}
+.comiteejecutivodirector h5 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.comiteejecutivodirector p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/*SPONSORS*/
+.sponsorslogos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 80px);
+    margin: 40px auto;
+    width: auto;
+    text-align: center;
+}
+.sponsorslogos img {
+    height: 100px;
+}
+.sponsorstitulo{
+    text-align: center;
+    color:#f15a2c;
+    padding: 60px;
+    font-size: xx-large;
+}
+
+/* - FOOTER - */
+.footergrupouno {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px;
+    align-items: center;
+    background-color:#777;
+    color: white;
+}
+
+.footercopyright {
+    text-align: center;
+    font-size: smaller;
+}
+.footerlogo img {
+    padding-right: 80px;
+    width: 300px;
+    height: auto;
+}
+
+/*//////////////// MEDIA QUERY ////////////////*/
