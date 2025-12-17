@@ -9,6 +9,7 @@
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 83.34px;
     font-size: 20px;
 }
 
@@ -41,9 +42,7 @@ body {
     font-family: 'Poppins', sans-serif;
     justify-content: space-between;
     margin: 0;
-}
-body:not(header) {
-    padding-top: 83.34px;
+    padding-top: 0;
 }
 
 /* - NAVEGACION */
@@ -70,6 +69,7 @@ nav a:hover {
     display: flex;
     height: 550px;
     overflow: hidden;
+    margin-top: 83.34px;
 }
 .portadaslogans {
     width: 40%;
@@ -78,12 +78,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 30px;
+    padding: 0;
+    background-color: #f15a2c;
 }
 .portadaslogans img {
-    width: auto;
+    width: 100%;
     height: 100%; 
-    object-fit: contain; 
+    object-fit: cover; 
 }
 .portadaimagen {
     width: 55%;
@@ -141,7 +142,7 @@ nav a:hover {
 }
 .iniciosumatetextouno h4 {
     flex: 1 1 50%;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
     margin: 0;
 }
@@ -150,9 +151,10 @@ nav a:hover {
     border: 2px solid #ffffff;
     color: #ffffff;
     padding: 12px 20px;
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     display: inline-block;
     text-align: center;
@@ -161,22 +163,21 @@ nav a:hover {
     white-space: nowrap;
 }
 .iniciosumateboton p {
-    font-size: 14px;
+    font-size: 30px;
     font-weight: 700;
     margin: 0;
 }
 .iniciosumateimagen {
     padding: 0;
     position: relative;
-    width: 100%;
+    width: 50%;
+    overflow: hidden;
 }
 .iniciosumateimagen img {
-    flex: 1 1 50%;
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: inherit;
-    align-items: stretch;
+    height: 100%;
+    object-fit: cover;
 }
 .iniciosumateimagen::after {
     content: "";
@@ -240,35 +241,105 @@ nav a:hover {
     opacity: 0.85;
 }
 
+/*DONAR*/
+.donar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #7eb7e4;
+    width: 100%;
+    height: 500px;
+}
+.donartexto {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+}
+.donartexto p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+    color: white;
+}
+.donarboton {
+    width: fit-content;
+}
+.botondonar {
+    padding: 12px 32px;
+    background-color: #1d0480;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    transition: 0.2s;
+}
+.botondonar:hover {
+    opacity: 0.85;
+}
 /*COMITÉ*/
 .comitejecutivo {
     background-color: #343434;
     color: white;
-    max-width: auto;
+    width: 100%;
     margin: 0 auto;
-    padding: 40px 40px;
-    display: flex;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: auto repeat(2, 1fr);
+    gap: 40px 60px;
+    align-items: start;
+    height: max-content;
 }
-.comiteejecutivotitulo h4 {
-    font-size: 32px;
+.comiteejecutivotitulo {
+    grid-column: 1;
+    align-self: center;
+}
+.comiteejecutivotitulo h2 {
+    font-size: 48px;
     font-weight: 700;
-    padding: 50% 0%;
+    margin: 0;
+    line-height: 1.1;
+    color: white;
+}
+.comitejecutivo > .comiteejecutivocolumna:nth-child(2) {
+    grid-column: 2;
+}
+.comitejecutivo > .comiteejecutivocolumna:nth-child(3) {
+    grid-column: 3;
 }
 .comitejecutivocolumna {
-    flex: 1;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-self: center;
 }
 .comiteejecutivodirector {
-    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
 }
-.comiteejecutivodirector h5 {
-    margin: 0 0 4px 0;
+.comiteejecutivodirector:last-child {
+    margin-bottom: 0;
+}
+.comiteejecutivodirector h3 {
+    margin: 0 0 8px 0;
     font-size: 16px;
     font-weight: 700;
+    color: white;
+    line-height: 1.3;
 }
 .comiteejecutivodirector p {
-    margin: 0;
+    margin: 0 0 4px 0;
     font-size: 15px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
 }
 
 /*SPONSORS*/
@@ -312,3 +383,20 @@ nav a:hover {
 }
 
 /*//////////////// MEDIA QUERY ////////////////*/
+@media (max-width: 768px) {
+    .comitejecutivo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    .comiteejecutivotitulo {
+        grid-column: 1;
+    }
+    .comitejecutivo > .comiteejecutivocolumna:nth-child(2),
+    .comitejecutivo > .comiteejecutivocolumna:nth-child(3) {
+        grid-column: 1;
+    }
+    .comiteejecutivotitulo h2 {
+        font-size: 36px;
+    }
+}
