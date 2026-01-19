@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,19 @@
 
 <body>
     <header>
-     <div id="logo">
-        <img src="imagenes/institucional/logogrissolopng.png">
-     </div>
-
-      <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#sumate">Sumate</a></li>
-            <li><a href="#noticias">Noticias</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+        <a href="#inicio" id=logo>
+            <img src="imagenes/institucional/logogrissolopng.png" alt="MUNASUR">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="#sumate">Sumate</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#donar">Apoyanos</a></li>                       
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
     </header>
 
     <section id="inicio" class="portada">
@@ -37,23 +38,23 @@
    
     <section class="iniciostats">
         <div class="stats">
-            <h5>8</h5>
+            <h5 class="contadorsinmas" data-target="8">0</h5>
             <p>Años</p>
         </div>
         <div class="stats">
-            <h5>30</h5>
+            <h5 class="contadorsinmas" data-target="30">0</h5>
             <p>Modelos</p>
         </div>    
         <div class="stats">
-            <h5>+ 2.000</h5>
+            <h5 class="contador" data-target="2000">0</h5>
             <p>Participantes</p>
         </div>
         <div class="stats">
-            <h5>+150</h5>
+            <h5 class="contador" data-target="150">0</h5>
             <p>Voluntari@s</p>
         </div>
         <div class="stats">    
-            <h5>8</h5>
+            <h5 class="contadorsinmas" data-target="8">0</h5>
             <p>Provincias</p>
         </div>
     </section>
@@ -96,9 +97,9 @@
             <p>Tu aporte nos ayuda a seguir creciendo</p>
         </div>
         <div class="donarboton">
-            <button class="botondonar">
+            <a href="https://donaronline.org/munasur/se-parte-de-la-transformacion" target="_blank" class="botondonar">
                 DONAR AHORA
-            </button>
+            </a>
         </div>
         <div class="donarimagen">
             <img src="imagenes/varias/donarimagen.jpg">
@@ -151,44 +152,22 @@
         </div>
         <div class="infinite-scroller" data-speed="slow" data-pause="true" data-fade="true">
             <div class="scroller-wrapper">
-              <div class="scroller-item"><img src="imagenes/varias/logo-laquinta.webp"></div>
-              <div class="scroller-item"><img src="imagenes/varias/1.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/2.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/3.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/4.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/5.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/6.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/7.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/8.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/9.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/10.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/11.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/12.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/13.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/14.jpg"></div>
-              <div class="scroller-item"><img src="imagenes/varias/15.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/16.jpg"></div>
-              <div class="scroller-item"><img src="imagenes/varias/17.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/18.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/logo-laquinta.webp"></div>
-              <div class="scroller-item"><img src="imagenes/varias/1.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/2.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/3.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/4.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/5.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/6.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/7.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/8.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/9.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/10.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/11.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/12.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/13.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/14.jpg"></div>
-              <div class="scroller-item"><img src="imagenes/varias/15.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/16.jpg"></div>
-              <div class="scroller-item"><img src="imagenes/varias/17.png"></div>
-              <div class="scroller-item"><img src="imagenes/varias/18.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsuno.webp"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsdos.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorstres.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorscuatro.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorscinco.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsseis.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorssiete.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsocho.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsnueve.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsdiez.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsonce.webp"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsdoce.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorstrece.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorscatorce.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsquince.png"></div>
+              <div class="scroller-item"><img src="imagenes/varias/sponsors/sponsorsdieciseis.png"></div>
             </div>
           </div>
         </section>
