@@ -1,6 +1,7 @@
 console.log("JS cargado");
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Contadores animados
     const contadores = document.querySelectorAll('.contador, .contadorsinmas');
 
     contadores.forEach(contador => {
@@ -20,5 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
         actualizar();
     });
+
+    // Menú hamburguesa para móviles
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    }
 });
 
