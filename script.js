@@ -1,39 +1,51 @@
 console.log("JS cargado");
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Contadores animados
+
+    /// STATS ANIMACIÓN ///
     const contadores = document.querySelectorAll('.contador, .contadorsinmas');
 
-    contadores.forEach(contador => {
-        const objetivo = Number(contador.dataset.target);
-        let actual = 0;
-        const incremento = objetivo / 80;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
 
-        const actualizar = () => {
-            actual += incremento;
-            if (actual < objetivo) {
-                contador.textContent = Math.ceil(actual);
-                requestAnimationFrame(actualizar);
-            } else {
-                contador.textContent = objetivo;
-            }
-        };
+            if (!entry.isIntersecting) return;
 
-        actualizar();
-    });
+            const contador = entry.target;
+            const objetivo = Number(contador.dataset.target);
 
-    // Menú hamburguesa para móviles
+            let actual = 0;
+            const incremento = objetivo / 200;
+
+            const actualizar = () => {
+                actual += incremento;
+
+                if (actual < objetivo) {
+                    contador.textContent = Math.ceil(actual);
+                    requestAnimationFrame(actualizar);
+                } else {
+                    contador.textContent = objetivo;
+                }
+            };
+
+            actualizar();
+            observer.unobserve(contador);
+        });
+    }, { threshold: 0.1 });
+
+    contadores.forEach(contador => observer.observe(contador));
+
+    /// MENU RESPONSIVE ///
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-    
+
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         const navLinks = document.querySelectorAll('nav a');
+
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
@@ -41,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Cerrar menú al hacer clic fuera
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
                 nav.classList.remove('active');
